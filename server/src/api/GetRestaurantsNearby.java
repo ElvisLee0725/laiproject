@@ -35,6 +35,8 @@ public class GetRestaurantsNearby extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+	
+	// Test for modification and push
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("application/json");
@@ -79,8 +81,8 @@ public class GetRestaurantsNearby extends HttpServlet {
 			if (input.has("lat") && input.has("lon")) {
 				double lat = (Double) input.get("lat");
 				double lon = (Double) input.get("lon");
-				//array = connection.GetRestaurantsNearLoation(lat, lon);
-				array = connection.GetRestaurantsNearLoationViaYelpAPI(lat, lon);
+				array = connection.GetRestaurantsNearLoation(lat, lon);
+				//array = connection.GetRestaurantsNearLoationViaYelpAPI(lat, lon);
 			}
 			response.setContentType("application/json");
 			response.addHeader("Access-Control-Allow-Origin", "*");

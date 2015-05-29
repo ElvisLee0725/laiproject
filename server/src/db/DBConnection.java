@@ -23,7 +23,7 @@ public class DBConnection {
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			conn = DriverManager
-					.getConnection("jdbc:mysql://localhost:3306/mysql?"
+					.getConnection("jdbc:mysql://localhost:3333/mysql?"
 							+ "user=root&password=root");
 		} catch (Exception e) {
 			e.printStackTrace();
